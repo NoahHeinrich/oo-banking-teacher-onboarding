@@ -13,7 +13,7 @@ class Transfer
   end
   
   def execute_transaction
-    puts valid?
+    puts self.valid?
     if self.status == "pending" && valid?
       receiver.deposit(self.amount)
       sender.balance -= self.amount
